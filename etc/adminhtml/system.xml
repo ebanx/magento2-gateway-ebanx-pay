@@ -47,52 +47,9 @@
                     <comment>Record all errors that occur when executing a transaction.</comment>
                 </field>
 
-                <field id="show_local_total" translate="label" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Show total local amount</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>Show your customer the total purchase amount in local currency on the checkout.</comment>
-                </field>
-
-                <field id="show_iof" translate="label" type="select" sortOrder="120" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Apply IOF to local amount</label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>Get in touch with the EBANX team to validate the change and then, you just have to select "no" on this option. That way, your customer will not be charged with IOF (Brazilian Tax on Financial Operations).</comment>
-                    <depends><field id="show_local_total">1</field></depends>
-                </field>
-
                 <field id="payments_brazil" translate="label" type="multiselect" sortOrder="300" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>Brazil payments</label>
                     <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Brazil</source_model>
-                </field>
-
-                <field id="payments_argentina" translate="label" type="multiselect" sortOrder="310" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Argentina payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Argentina</source_model>
-                </field>
-
-                <field id="payments_chile" translate="label" type="multiselect" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Chile payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Chile</source_model>
-                </field>
-
-                <field id="payments_colombia" translate="label" type="multiselect" sortOrder="330" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Colombia payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Colombia</source_model>
-                </field>
-
-                <field id="payments_ecuador" translate="label" type="multiselect" sortOrder="340" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Ecuador payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Ecuador</source_model>
-                </field>
-
-                <field id="payments_peru" translate="label" type="multiselect" sortOrder="350" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Peru payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Peru</source_model>
-                </field>
-
-                <field id="payments_mexico" translate="label" type="multiselect" sortOrder="360" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Mexico payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Mexico</source_model>
                 </field>
 
                 <group id="cc" translate="label" type="text" sortOrder="460" showInDefault="1" showInWebsite="1" showInStore="1">
@@ -176,18 +133,6 @@
 
                     <field id="document_field_brazil_cnpj" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Brazil CNPJ Document</label>
-                    </field>
-
-                    <field id="document_field_chile" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Chile RUT Document</label>
-                    </field>
-
-                    <field id="document_field_argentina" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Argentina CUIT/CUIL/CDI Document</label>
-                    </field>
-
-                    <field id="document_field_colombia" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Colombia NIT/CC Document</label>
                     </field>
                 </group>
 

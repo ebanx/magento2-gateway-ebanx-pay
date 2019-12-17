@@ -1,7 +1,7 @@
 define(
     [
-        'underscore',
         'ebanx',
+        'underscore',
         'DigitalHub_Ebanx/js/action/installments',
         'DigitalHub_Ebanx/js/action/document-number-verification',
         'DigitalHub_Ebanx/js/action/saved-cards',
