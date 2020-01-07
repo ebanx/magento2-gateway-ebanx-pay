@@ -45,7 +45,8 @@ class TransactionRefund implements ClientInterface
             'integrationKey' => $this->_ebanxHelper->getConfigData('digitalhub_ebanx_global', 'live_integration_key'),
             'sandboxIntegrationKey' => $this->_ebanxHelper->getConfigData('digitalhub_ebanx_global', 'sandbox_integration_key'),
             'isSandbox' => (int)$this->_ebanxHelper->getConfigData('digitalhub_ebanx_global', 'sandbox'),
-            'baseCurrency' => $this->_storeManager->getStore()->getBaseCurrencyCode(),
+            //'baseCurrency' => $this->_storeManager->getStore()->getBaseCurrencyCode(),
+            'baseCurrency' => 'BRL',
         ]);
 
         $creditCardConfig = new \Ebanx\Benjamin\Models\Configs\CreditCardConfig([

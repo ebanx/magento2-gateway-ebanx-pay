@@ -10,7 +10,7 @@ class HttpUtil {
 		$ebanx_client = is_null($credit_card_config)
 			? EBANX($config)
 			: EBANX($config, $credit_card_config);
-		$ebanx_client->setSource('Magento2', self::getEbanxVersion());
+		//$ebanx_client->setSource('Magento2', self::getEbanxVersion());
 
 		return $ebanx_client;
 	}
