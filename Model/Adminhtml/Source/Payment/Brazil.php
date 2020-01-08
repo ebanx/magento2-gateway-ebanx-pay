@@ -17,10 +17,6 @@ class Brazil implements \Magento\Framework\Option\ArrayInterface
                 'value' => 'boleto',
                 'label' => __('Boleto Bancário')
             ],
-            [
-                'value' => 'tef',
-                'label' => __('TEF - Online Banking')
-            ],
         ];
     }
 }

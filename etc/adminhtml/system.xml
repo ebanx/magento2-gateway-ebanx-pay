@@ -11,7 +11,7 @@
     <system>
         <section id="payment">
             <group id="digitalhub_ebanx_global" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
-                <label>EBANX</label>
+                <label>EBANX Pay</label>
 
                 <field id="active" translate="label" type="select" sortOrder="0" showInDefault="1" showInWebsite="1" showInStore="0">
                     <label>Active</label>
@@ -65,36 +65,6 @@
                     <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Brazil</source_model>
                 </field>
 
-                <field id="payments_argentina" translate="label" type="multiselect" sortOrder="310" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Argentina payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Argentina</source_model>
-                </field>
-
-                <field id="payments_chile" translate="label" type="multiselect" sortOrder="320" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Chile payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Chile</source_model>
-                </field>
-
-                <field id="payments_colombia" translate="label" type="multiselect" sortOrder="330" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Colombia payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Colombia</source_model>
-                </field>
-
-                <field id="payments_ecuador" translate="label" type="multiselect" sortOrder="340" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Ecuador payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Ecuador</source_model>
-                </field>
-
-                <field id="payments_peru" translate="label" type="multiselect" sortOrder="350" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Peru payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Peru</source_model>
-                </field>
-
-                <field id="payments_mexico" translate="label" type="multiselect" sortOrder="360" showInDefault="1" showInWebsite="1" showInStore="0">
-                    <label>Mexico payments</label>
-                    <source_model>DigitalHub\Ebanx\Model\Adminhtml\Source\Payment\Mexico</source_model>
-                </field>
-
                 <group id="cc" translate="label" type="text" sortOrder="460" showInDefault="1" showInWebsite="1" showInStore="1">
                     <label>Credit Card configuration</label>
 
@@ -123,7 +93,7 @@
 
                     <field id="min_installment_value" translate="label" type="text" sortOrder="430" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Min installment value</label>
-                        <comment>Set the minimum installment value to show to the options for your customer on the checkout page. The default values are Brazil: BRL 5, Mexico: MXN 100, Colombia: COL 1, Argentina: ARS 1. Any amount under these will not be considered.</comment>
+                        <comment>Set the minimum installment value to show to the options for your customer on the checkout page. The default values of Brazil (BRL) are 5.</comment>
                     </field>
 
                     <field id="enable_interest_rate" translate="label" type="select" sortOrder="440" showInDefault="1" showInWebsite="1" showInStore="0">
@@ -145,7 +115,8 @@
                     <label>Cash payments configurations</label>
                     <field id="cash_expiration_days" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Days to expiration</label>
-                        <comment>Define the maximum number of days on which your customer can complete the payment of: Boleto, OXXO, Sencillito, PagoEfectivo and SafetyPay.</comment>
+<!--                        <comment>Define the maximum number of days on which your customer can complete the payment of: Boleto, OXXO, Sencillito, PagoEfectivo and SafetyPay.</comment>-->
+                        <comment>Define the maximum number of days on which your customer can complete the Boleto payment.</comment>
                     </field>
                 </group>
 
@@ -176,18 +147,6 @@
 
                     <field id="document_field_brazil_cnpj" translate="label" type="text" sortOrder="50" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Brazil CNPJ Document</label>
-                    </field>
-
-                    <field id="document_field_chile" translate="label" type="text" sortOrder="60" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Chile RUT Document</label>
-                    </field>
-
-                    <field id="document_field_argentina" translate="label" type="text" sortOrder="70" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Argentina CUIT/CUIL/CDI Document</label>
-                    </field>
-
-                    <field id="document_field_colombia" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
-                        <label>Colombia NIT/CC Document</label>
                     </field>
                 </group>
 

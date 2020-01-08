@@ -49,31 +49,32 @@ class Exchange extends \Magento\Framework\App\Action\Action
         $integration_key = $isSandbox ? $sandboxIntegrationKey : $integrationKey;
 
         $merchant_currency = $this->_storeManager->getStore()->getCurrentCurrency()->getCode();
-        $customer_currency = 'USD';
-
-        switch($country){
-            case 'BR':
-                $customer_currency = 'BRL';
-                break;
-            case 'AR':
-                $customer_currency = 'ARS';
-                break;
-            case 'CL':
-                $customer_currency = 'CLP';
-                break;
-            case 'CO':
-                $customer_currency = 'COP';
-                break;
-            case 'MX':
-                $customer_currency = 'MXN';
-                break;
-            case 'PE':
-                $customer_currency = 'PEN';
-                break;
-            case 'EC':
-                $customer_currency = 'USD';
-                break;
-        }
+        $customer_currency = 'BRL';
+//        $customer_currency = 'USD';
+//
+//        switch($country){
+//            case 'BR':
+//                $customer_currency = 'BRL';
+//                break;
+//            case 'AR':
+//                $customer_currency = 'ARS';
+//                break;
+//            case 'CL':
+//                $customer_currency = 'CLP';
+//                break;
+//            case 'CO':
+//                $customer_currency = 'COP';
+//                break;
+//            case 'MX':
+//                $customer_currency = 'MXN';
+//                break;
+//            case 'PE':
+//                $customer_currency = 'PEN';
+//                break;
+//            case 'EC':
+//                $customer_currency = 'USD';
+//                break;
+//        }
 
         try {
             $this->curl->setHeaders([
@@ -96,7 +97,8 @@ class Exchange extends \Magento\Framework\App\Action\Action
             $result->setData([
                 'success' => true,
                 'total_formatted' => $total_formatted,
-                'total_with_iof_formatted' => $customer_currency == 'BRL' ? $total_formatted_iof : null,
+                //'total_with_iof_formatted' => $customer_currency == 'BRL' ? $total_formatted_iof : null,
+                'total_with_iof_formatted' => $total_formatted_iof,
                 'currency' => $customer_currency
             ]);
         } catch (\Exception $e) {

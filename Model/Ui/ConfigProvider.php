@@ -77,7 +77,7 @@ class ConfigProvider implements ConfigProviderInterface
         return [
             'payment' => [
                 'digitalhub_ebanx_global' => [
-                    'ebanx_logo' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/ebanx.png'),
+                    'ebanx_logo' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/ebanx-pay.png'),
                     'sandbox' => (int)$isSandbox,
                     'public_integration_key' => $public_integration_key,
                     'debug' => (int)$isDebugEnabled,
