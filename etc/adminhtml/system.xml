@@ -80,7 +80,7 @@
                         <comment>Allow your customer to complete payments in one-click using credit cards saved.</comment>
                     </field>
 
-                    <field id="capture" translate="label" type="select" sortOrder="420" showInDefault="1" showInWebsite="1" showInStore="0">
+                    <field id="capture" translate="label" type="select" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
                         <label>Auto-Capture</label>
                         <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                         <comment>Automatically capture payments from your customers, just for credit card. Otherwise you will need to capture the payment manually by creating an invoice for each order. Not captured payments will be cancelled in 4 days.</comment>
