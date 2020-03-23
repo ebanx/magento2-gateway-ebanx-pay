@@ -384,6 +384,12 @@
                 <sort_order>1</sort_order>
                 <group>digitalhub_ebanx</group>
             </digitalhub_ebanx_mexico_spei>
+
+            <digitalhub_ebanx_global>
+                <cc>
+                    <capture>1</capture>
+                </cc>
+            </digitalhub_ebanx_global>
         </payment>
     </default>
 </config>
