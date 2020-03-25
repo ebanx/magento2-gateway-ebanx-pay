@@ -385,11 +385,14 @@
                 <group>digitalhub_ebanx</group>
             </digitalhub_ebanx_mexico_spei>
 
-            <digitalhub_ebanx_global>
-                <cc>
-                    <capture>1</capture>
-                </cc>
-            </digitalhub_ebanx_global>
+<!--            <digitalhub_ebanx_global>-->
+<!--                <title>Global</title>-->
+<!--                <cc>-->
+<!--                    <title>Auto Capture</title>-->
+<!--                    <capture>1</capture>-->
+<!--                    <model>Magento\Config\Model\Config\Source\Yesno</model>-->
+<!--                </cc>-->
+<!--            </digitalhub_ebanx_global>-->
         </payment>
     </default>
 </config>

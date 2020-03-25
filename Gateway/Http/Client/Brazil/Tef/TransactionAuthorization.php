@@ -47,6 +47,7 @@ class TransactionAuthorization implements ClientInterface
             'isSandbox' => (int)$this->_ebanxHelper->getConfigData('digitalhub_ebanx_global', 'sandbox'),
             //'baseCurrency' => $this->_storeManager->getStore()->getBaseCurrencyCode(),
             'baseCurrency' => 'BRL',
+            'notificationUrl' => $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/digitalhub_ebanx/notification/status',
         ]);
 
         $this->_ebanxClient = HttpUtil::setupEbanxClient($config, null);
