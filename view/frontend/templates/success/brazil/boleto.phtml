@@ -4,7 +4,7 @@ $dueDate = new \DateTime($transactionData['payment']['due_date']);
 ?>
 
 <div class="payment-method-details brazil-boleto">
-    <h4><?php echo __('Detalhes do seu pedido') ?></h4>
+    <h4><?php echo __('Details of your order') ?></h4>
     <p>
         <?php
             echo __(
@@ -18,15 +18,15 @@ $dueDate = new \DateTime($transactionData['payment']['due_date']);
         <br>
         <?php echo __('Enviamos uma cópia para o e-mail:') ?> <?php echo $this->getOrderCustomerEmail() ?>.
         <br>
-        <?php echo __('Pague o boleto pelo aplicativo do seu banco utilizando o código de barras. Você também pode imprimir o boleto e pagar em casas lotéricas, ou no caixa de qualquer banco.') ?>
+        <?php echo __('Pague o boleto aplicativo do seu banco utilizando o código de barras. Você também pode imprimir o boleto e pagar em casas lotéricas ou no caixa de qualquer banco.') ?>
     </p>
 
     <div class="boleto-data-box">
         <input class="barcode" value="<?php echo $transactionData['payment']['boleto_barcode'] ?>" readonly/>
         <div class="boleto-actions">
-            <a href="#" class="button button-copy"><?php echo __('Copiar') ?></a>
-            <a href="<?php echo $transactionData['payment']['boleto_url'] ?>&format=pdf" target="_blank" class="button button-pdf"><?php echo __('Salvar em PDF') ?></a>
-            <a href="<?php echo $transactionData['payment']['boleto_url'] ?>" target="_blank" class="button button-print"><?php echo __('Imprimir Boleto Bancário') ?></a>
+            <a href="#" class="button button-copy"><?php echo __('Copy') ?></a>
+            <a href="<?php echo $transactionData['payment']['boleto_url'] ?>&format=pdf" target="_blank" class="button button-pdf"><?php echo __('Save PDF') ?></a>
+            <a href="<?php echo $transactionData['payment']['boleto_url'] ?>" target="_blank" class="button button-print"><?php echo __('Print Boleto Bancário') ?></a>
         </div>
         <p class="observation">
             <?php echo __('Dica: pague seu boleto até as 21h de um dia útil para garantir que o pedido seja aprovado mais rápido :)') ?>
