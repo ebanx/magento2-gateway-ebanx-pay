@@ -16,7 +16,7 @@
                 <model>DigitalHubEbanxBrazilCreditCardFacade</model>
                 <order_status>pending</order_status>
                 <payment_action>authorize</payment_action>
-                <title>Credit Card</title>
+                <title>Cartão de Crédito</title>
                 <can_authorize>1</can_authorize>
                 <can_capture>1</can_capture>
                 <can_capture_partial>1</can_capture_partial>

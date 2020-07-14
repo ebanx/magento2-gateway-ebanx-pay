@@ -1,34 +1,115 @@
-"Use previously saved credit card", "Usar um cartão salvo anteriormente"
-"Document Type", "Tipo do documento"
-"Document Number", "Número do documento"
-"Boleto Bancário", "Boleto Bancário"
-"Credit Card Information", "Informações do Cartão de Crédito"
-"Installments", "Parcelas"
-"Credit Card Holder Name", "Titular do Cartão"
-"Credit Card Number", "Número do cartão"
-"Expiration Date", "Validade"
-"Card Verification Number", "Código de Segurança"
-"What is this?", "O que é isso?"
-"Save credit card data to your account?", "Salvar dados do cartão em sua conta?"
-"TEF", "TEF"
-"Choose your bank", "Escolha seu banco"
-"Enter your document number", "Insira o seu número de documento",
-"Enter your name here", "Insira aqui seu nome"
-"Cupon de Pagos","Cupon de Pagos"
-PagoFacil,PagoFacil
+Number,Número
+"Value (monthly %)","Valor (mensal %)"
+Add,Adicionar
+"CPF - Individuals","CPF - Pessoas Físicas"
+"CNPJ - Companies","CNPJ - Pessoas Jurídicas"
+"Credit Card","Cartão de Crédito"
 Rapipago,Rapipago
-"Pay with","Pagar com"
-"Continue to payment","Continuar para o pagamento"
-"Place Order","Pagar"
-Multicaja,Multicaja
-Sencillito,Sencillito
+PagoFacil,PagoFacil
+"Cupon de Pagos","Cupon de Pagos"
+"Boleto Bancário","Boleto Bancário"
 Servipag,Servipag
+Sencillito,Sencillito
 Webpay,Webpay
-Baloto,Baloto
+Multicaja,Multicaja
 EFT,EFT
-Bank,Banco
+Baloto,Baloto
 SafetyPay,SafetyPay
-"Select the method","Escolha o método de pagamento"
+"Credit/Debit Card","Cartão de Crédito/Débito"
 OXXO,OXXO
 SPEI,SPEI
 PagoEfectivo,PagoEfectivo
+Authorize,Autorizar
+"Invoice #' . . ' created automatically","Invoice #' . . ' criada automaticamente"
+"Order cancelled automatically","Pedido cancelado automaticamente"
+"Card Type","Tipo de Cartão"
+"Masked Number","Número mascarado"
+"Created at","Criado em"
+Actions,Ações
+"Obrigado! Seu pedido foi recebido e seu pagamento está em processo de análise.","Obrigado! Seu pedido foi recebido e seu pagamento está em processo de análise."
+"Gracias! Su orden ha sido recibida y su pago está proceso de revisión.","Obrigado! Seu pedido foi recebido e seu pagamento está em processo de análise."
+"Obrigado! Seu pedido foi recebido e seu pagamento está confirmado","Obrigado! Seu pedido foi recebido e seu pagamento está confirmado"
+"Gracias! Su orden ha sido recibida y su pago está confirmado.","Obrigado! Seu pedido foi recebido e seu pagamento está confirmado"
+"Order number:","Número do pedido:"
+Date:,Data:
+Total:,Total:
+"Payment method:","Forma de pagamento:"
+"Details of your order","Detalhes do seu pedido:"
+"We send a copy to email","Enviamos uma cópia para o e-mail"
+"Click here to print your voucher","Clique aqui para imprimir o seu voucher"
+"Enviamos uma cópia para o e-mail:","Enviamos uma cópia para o e-mail:"
+"Pague o boleto aplicativo do seu banco utilizando o código de barras. Você também pode imprimir o boleto e pagar em casas lotéricas ou no caixa de qualquer banco.","Pague o boleto pelo aplicativo do seu banco utilizando o código de barras. Você também pode imprimir e pagar no caixa de qualquer banco, ou em casas lotéricas."
+Copy,"Copiar   "
+"Save PDF","Salvar em PDF   "
+"Print Boleto Bancário","Imprimir boleto"
+"Dica: pague seu boleto até as 21h de um dia útil para garantir que o pedido seja aprovado mais rápido :)","Dica: pague seu boleto até as 21h de um dia útil para garantir que o pedido seja aprovado mais rápido :)"
+"Enviamos una copia al correo electrónico:","Enviamos uma cópia para o e-mail:"
+"Print Baloto","Imprimir Baloto"
+"Print OXXO","Print OXXO"
+"Print SPEI","Print SPEI"
+"View CIP","Visualizar CIP"
+"Buy with 1-Click","Comprar com 1-Click"
+"Choose your shipping address","Selecione seu endereço de envio"
+"Choose the shipping method","Selecione o método de envio"
+"Select a previously saved credit card to pay your order","Selecione um cartão de crédito salvo previamente para pagar seu pedido"
+"Document number","Número do documento"
+"Place Order","Finalizar Pedido"
+"Credit Card Information","Dados do Cartão de Crédito"
+"Use a previously saved credit card","Use um cartão de crédito salvo previamente"
+Installments,Parcelas
+"Credit Card Holder Name","Nome do Portador do Cartão"
+"Credit Card Number","Número"
+"Expiration Date","Data de Validade"
+"Card Verification Number","CVV"
+"What is this?","O que é isso?"
+"Save credit card data to your account?","Salvar dados do cartão na sua conta?"
+"Pay with","Pagar com"
+"Continue to payment","Continuar para pagamento"
+TEF,TEF
+"Choose your bank","Selecione o seu banco"
+Bank,Banco
+"Use previously saved credit card","Use um cartão de crédito salvo previamente"
+"Document Type","Tipo de Documento"
+"Document Number","Número do documento"
+"Select the method","Selecione o método"
+"Credit/Debit Card Information","Informações do cartão de crédito/débito"
+"Please, select all required product options","Por favor, selecione todas as opções obrigatórias do produto"
+"An error ocurred when trying place your order.","Ocorreu um erro ao finalizar seu pedido."
+"x of ","x de "
+" (with interest)"," (com juros)"
+"Use a different credit card","Usar outro cartão"
+"Total amount in local currency:","Valor total em moeda local:"
+"Token generation error. Please contact support.","Erro ao gerar um token. Por favor, contate o suporte."
+"Invalid Document Length","Tamanho do número de documento inválido"
+"Invalid Credit Card Data","Dados do cartão inválidos"
+"Total amount in local currency with IOF (0.38%):","Valor total em moeda local com IOF (0.38%):"
+"Invalid Document","Documento inválido"
+Cash,Dinheiro
+On-line,On-line
+"EBANX Pay","EBANX Pay"
+Active,Ativo
+"Sandbox Mode","Modo Sandbox"
+"Integration Key","Integration Key"
+"Public Integration Key","Public Integration Key"
+Debug,Debug
+"Show total local amount","Exibir total em moeda local"
+"Apply IOF to local amount","Aplicar IOF em moeda local"
+"Brazil payments","Pagamentos no Brasil"
+"Credit Card configuration","Configurações de Cartão de Crédito"
+"Save credit card","Salvar cartão de crédito"
+"1-Click payment","Pagamento com 1-Click"
+Auto-Capture,Auto-Capture
+"Max installments number","Número máximo de parcelas"
+"Min installment value","Valor mínimo de parcela"
+"Enable interest rates","Habilitar taxas para parcelado"
+"Interest rates","Taxa de parcelado"
+"Cash payments configurations","Configurações de Boleto Bancário"
+"Days to expiration","Validade"
+"Customer fields configuration","Configurações de campos adicionais do cliente"
+"Street custom field","Campo Rua"
+"Street number custom field","Campo Número da Rua"
+"Address complement custom field","Campo Complemento"
+"Brazil CPF Document","Campo CPF"
+"Brazil CNPJ Document","Campo CNPJ"
+"My Saved Credit Cards","Meus cartões salvos"
+"Manage my saved credit cards informations","Gerenciar meus cartões salvos"

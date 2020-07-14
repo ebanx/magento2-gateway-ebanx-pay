@@ -11,7 +11,7 @@ class Brazil implements \Magento\Framework\Option\ArrayInterface
         return [
             [
                 'value' => 'creditcard',
-                'label' => __('Credit Card')
+                'label' => __('Cartão de Crédito')
             ],
             [
                 'value' => 'boleto',
