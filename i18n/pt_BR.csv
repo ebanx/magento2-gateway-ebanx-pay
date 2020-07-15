@@ -101,7 +101,7 @@ Debug,Debug
 Auto-Capture,Auto-Capture
 "Max installments number","Número máximo de parcelas"
 "Min installment value","Valor mínimo de parcela"
-"Enable interest rates","Habilitar taxas de juros para transações parceladas"
+"Enable interest rates","Habilitar taxa de juros para transações parceladas"
 "Interest rates","Taxa de juros"
 "Cash payments configurations","Configurações de Boleto Bancário"
 "Days to expiration","Validade"
