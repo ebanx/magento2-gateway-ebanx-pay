@@ -1,24 +1,29 @@
 <?php
     $transactionData = $this->getTransactionData();
     $creditcardPayment = strpos($this->getOrderPaymentMethod(), 'creditcard');
+    $boletoPayment = strpos($this->getOrderPaymentMethod(), 'boleto');
     $paymentStatus = $transactionData['payment']['status'];
     $paymentCountry = $transactionData['payment']['country'];
 ?>
 
 <div class="digitalhub-ebanx-success-page">
     <div class="page-title">
-	    <?php if($paymentStatus === 'PE' && $creditcardPayment): ?>
-		    <?php if($paymentCountry == 'br'): ?>
+        <?php if($paymentCountry == 'br'): ?>
+            <?php if($paymentStatus == 'CO'): ?>
+                <h2><?php echo __('Obrigado! Seu pedido foi recebido e seu pagamento está confirmado.') ?></h2>
+            <?php elseif ($boletoPayment):?>
+                <h2><?php echo __('Obrigado! Seu pedido foi recebido e estamos aguardando o seu pagamento.') ?></h2>
+            <?php else :?>
                 <h2><?php echo __('Obrigado! Seu pedido foi recebido e seu pagamento está em processo de análise.') ?></h2>
-		    <?php else: ?>
-                <h2><?php echo __('Gracias! Su orden ha sido recibida y su pago está proceso de revisión.') ?></h2>
-		    <?php endif; ?>
-        <?php else:?>
-            <?php if($paymentCountry == 'br'): ?>
-                <h2><?php echo __('Obrigado! Seu pedido foi recebido e seu pagamento está confirmado') ?></h2>
-            <?php else: ?>
+            <?php endif; ?>
+        <?php else: ?>
+            <?php if($paymentStatus == 'CO'): ?>
                 <h2><?php echo __('Gracias! Su orden ha sido recibida y su pago está confirmado.') ?></h2>
-    	    <?php endif; ?>
+            <?php elseif ($boletoPayment):?>
+                <h2><?php echo __('Gracias! Su orden ha sido recibida y estamos esperando su pago.') ?></h2>
+            <?php else :?>
+                <h2><?php echo __('Gracias! Su orden ha sido recibida y su pago está bajo revisión.') ?></h2>
+            <?php endif; ?>
         <?php endif; ?>
     </div>
 

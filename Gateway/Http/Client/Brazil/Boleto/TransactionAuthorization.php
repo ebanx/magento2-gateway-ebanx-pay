@@ -39,7 +39,7 @@ class TransactionAuthorization implements ClientInterface
         $this->_logger = $logger;
         $this->_appState = $context->getAppState();
         $this->_storeManager = $storeManager;
-
+        echo(HttpUtil::getRequestScheme());
         // initialize client
         $config = new \Ebanx\Benjamin\Models\Configs\Config([
             'integrationKey' => $this->_ebanxHelper->getConfigData('digitalhub_ebanx_global', 'live_integration_key'),
@@ -47,7 +47,7 @@ class TransactionAuthorization implements ClientInterface
             'isSandbox' => (int)$this->_ebanxHelper->getConfigData('digitalhub_ebanx_global', 'sandbox'),
             //'baseCurrency' => $this->_storeManager->getStore()->getBaseCurrencyCode(),
             'baseCurrency' => 'BRL',
-            'notificationUrl' => $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/digitalhub_ebanx/notification/status',
+            'notificationUrl' => HttpUtil::getRequestScheme() . '://' . $_SERVER['HTTP_HOST'] . '/digitalhub_ebanx/notification/status',
         ]);
 
         $this->_ebanxClient = HttpUtil::setupEbanxClient($config, null);
