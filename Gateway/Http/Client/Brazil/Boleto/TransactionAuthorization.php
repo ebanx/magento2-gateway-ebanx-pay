@@ -39,7 +39,6 @@ class TransactionAuthorization implements ClientInterface
         $this->_logger = $logger;
         $this->_appState = $context->getAppState();
         $this->_storeManager = $storeManager;
-        echo(HttpUtil::getRequestScheme());
         // initialize client
         $config = new \Ebanx\Benjamin\Models\Configs\Config([
             'integrationKey' => $this->_ebanxHelper->getConfigData('digitalhub_ebanx_global', 'live_integration_key'),
