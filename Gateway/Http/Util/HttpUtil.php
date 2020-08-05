@@ -18,6 +18,8 @@ class HttpUtil
 
     public static function getRequestScheme()
     {
+        $storeManager = ObjectManager::getInstance()->get('\Magento\Store\Model\StoreManagerInterface');
+
         if (isset($_SERVER['HTTPS'])) {
             if ('on' == strtolower($_SERVER['HTTPS'])) {
                 return 'https';
@@ -26,6 +28,8 @@ class HttpUtil
                 return 'https';
             }
         } elseif (isset($_SERVER['SERVER_PORT']) && ('443' == $_SERVER['SERVER_PORT'])) {
+            return 'https';
+        } elseif ($storeManager->getStore()->isCurrentlySecure()) {
             return 'https';
         }
         return 'http';
