@@ -58,6 +58,10 @@ class CustomerDataBuilder implements BuilderInterface
             if(!$documentNumber && isset($additionalData[DataAssignObserver::DOCUMENT_NUMBER])){
                 $documentNumber = $additionalData[DataAssignObserver::DOCUMENT_NUMBER];
             }
+
+            if(!$documentNumber) {
+                $documentNumber = $buildSubject['payment']->getPayment()->getOrder()->getCustomerTaxvat();
+            }
         }
 
         $person = new \Ebanx\Benjamin\Models\Person([

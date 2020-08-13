@@ -41,6 +41,9 @@ class AddressDataBuilder implements BuilderInterface
     {
         $billingAddress = $this->_session->getQuote()->getBillingAddress();
 
+        if(!$billingAddress->getQuoteId()) {
+            $billingAddress = $buildSubject['payment']->getPayment()->getOrder()->getBillingAddress();
+        }
 
         $street = $this->_ebanxHelper->getAddressData('street', $billingAddress);
         $streetNumber = $this->_ebanxHelper->getAddressData('street_number', $billingAddress);

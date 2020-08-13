@@ -6,15 +6,26 @@ $dueDate = new \DateTime($transactionData['payment']['due_date']);
 <div class="payment-method-details brazil-boleto">
     <h4><?php echo __('Details of your order') ?></h4>
     <p>
-        <?php
+        <?php if (isset($transactionData['payment']['customer'])): ?>
+            <?php
+                echo __(
+                    sprintf(
+                        '%s, seu boleto bancário foi gerado e a data de vencimento é %s.',
+                        ucwords(strtolower($transactionData['payment']['customer']['name'])),
+                        $dueDate->format('d/m/Y')
+                    )
+                )
+            ?>
+        <?php else: ?>
+            <?php
             echo __(
                 sprintf(
-                    '%s, seu boleto bancário foi gerado e a data de vencimento é %s.',
-                    ucwords(strtolower($transactionData['payment']['customer']['name'])),
+                    'Seu boleto bancário foi gerado e a data de vencimento é %s.',
                     $dueDate->format('d/m/Y')
                 )
             )
-        ?>
+            ?>
+        <?php endif; ?>
         <br>
         <?php echo __('Enviamos uma cópia para o e-mail:') ?> <?php echo $this->getOrderCustomerEmail() ?>.
         <br>
