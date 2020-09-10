@@ -4,15 +4,19 @@
     $boletoPayment = strpos($this->getOrderPaymentMethod(), 'boleto');
     $paymentStatus = $transactionData['payment']['status'];
     $paymentCountry = $transactionData['payment']['country'];
+    $orderDateTime = new \DateTime($this->getOrderDate());
 ?>
 
 <div class="digitalhub-ebanx-success-page">
     <div class="page-title">
         <?php if($paymentCountry == 'br'): ?>
+            <h2>
+                <strong><?php echo __('Pedido recebido!') ?></strong>
+            </h2>
             <?php if($paymentStatus == 'CO'): ?>
                 <h2><?php echo __('Obrigado! Seu pedido foi recebido e seu pagamento está confirmado.') ?></h2>
             <?php elseif ($boletoPayment):?>
-                <h2><?php echo __('Obrigado! Seu pedido foi recebido e estamos aguardando o seu pagamento.') ?></h2>
+                <h2><?php echo __('Pague seu boleto para finalizar sua compra.') ?></h2>
             <?php else :?>
                 <h2><?php echo __('Obrigado! Seu pedido foi recebido e seu pagamento está em processo de análise.') ?></h2>
             <?php endif; ?>
@@ -44,7 +48,7 @@
             </div>
             <div class="col col-date">
                 <h4><?php echo __('Date:') ?></h4>
-                <p><?php echo $this->getOrderDate() ?></p>
+                <p><?php echo $orderDateTime->format('d/m/Y H:i') ?></p>
             </div>
             <div class="col col-total">
                 <h4><?php echo __('Total:') ?></h4>
