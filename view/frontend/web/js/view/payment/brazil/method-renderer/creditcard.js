@@ -17,6 +17,7 @@ define(
         'jquery',
         'DigitalHub_Ebanx/js/action/total-local-currency',
         'DigitalHub_Ebanx/js/view/payment/credit-card-mask',
+        'DigitalHub_Ebanx/js/view/payment/credit-card-brand',
         'DigitalHub_Ebanx/js/view/payment/security-code-mask',
         'DigitalHub_Ebanx/js/view/payment/brazil/document-mask',
         'DigitalHub_Ebanx/js/view/payment/brazil/document-validator',
@@ -39,6 +40,7 @@ define(
         $,
         totalLocalCurrency,
         cardNumberMask,
+        cardNumberBrand,
         securityCodeMask,
         documentMask,
         validDocument
@@ -394,6 +396,7 @@ define(
 
             getCreditCardMask: function(){
                 cardNumberMask('#payment_form_digitalhub_ebanx_brazil_creditcard > .number input');
+                cardNumberBrand('input[name="payment[cc_number]"]');
             },
 
             getSecurityCodeMask: function(){

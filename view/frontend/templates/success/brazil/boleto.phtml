@@ -1,45 +1,65 @@
 <?php
-$transactionData = $this->getTransactionData();
-$dueDate = new \DateTime($transactionData['payment']['due_date']);
+    $transactionData = $this->getTransactionData();
+    $dueDate = new \DateTime($transactionData['payment']['due_date']);
+    $boletoNumber = $transactionData['payment']['boleto_barcode'];
+    $boletoNumberMask = '/(\d{5})(\d{5})(\d{5})(\d{6})(\d{5})(\d{6})(\d{1})(\d{14})/m';
+    $formatedBoletoNumber = preg_replace($boletoNumberMask, '$1.$2 $3.$4 $5.$6 $7 $8', $boletoNumber);
 ?>
 
 <div class="payment-method-details brazil-boleto">
+    <br/>
     <h4><?php echo __('Details of your order') ?></h4>
+
     <p>
-        <?php
-            echo __(
-                sprintf(
-                    '%s, seu boleto bancário foi gerado e a data de vencimento é %s.',
-                    ucwords(strtolower($transactionData['payment']['customer']['name'])),
-                    $dueDate->format('d/m/Y')
-                )
-            )
-        ?>
-        <br>
-        <?php echo __('Enviamos uma cópia para o e-mail:') ?> <?php echo $this->getOrderCustomerEmail() ?>.
-        <br>
-        <?php echo __('Pague o boleto aplicativo do seu banco utilizando o código de barras. Você também pode imprimir o boleto e pagar em casas lotéricas ou no caixa de qualquer banco.') ?>
+        <span><?php echo __('Data de vencimento:') ?></span>
+        <strong><?php echo $dueDate->format('d/m/Y') ?></strong>
     </p>
 
-    <div class="boleto-data-box">
-        <input class="barcode" value="<?php echo $transactionData['payment']['boleto_barcode'] ?>" readonly/>
+    <p>
+        <span><?php echo __('Uma cópia foi enviada para o e-mail:') ?></span>
+        <strong><?php echo $this->getOrderCustomerEmail() ?></strong>
+    </p>
+
+    <br/>
+    <p>Para pagar pelo Internet Banking, copie a linha digitável ou escaneie
+    o código de barras. Para pagar em qualquer banco, caixa eletrônico ou lotérica,
+    por favor, imprima o boleto.</p>
+
+    <div>
+        <div>
+            <svg id="barcode-preview"
+                data-height="46"
+                data-value="<?php echo $boletoNumber ?>"
+                data-displayvalue="false"
+                data-marginleft="-10"
+            ></svg><br/>
+            <div class="barcode"><?php echo $formatedBoletoNumber ?></p>
+        </div>
+        <br/>
         <div class="boleto-actions">
             <a href="#" class="button button-copy"><?php echo __('Copy') ?></a>
             <a href="<?php echo $transactionData['payment']['boleto_url'] ?>&format=pdf" target="_blank" class="button button-pdf"><?php echo __('Save PDF') ?></a>
             <a href="<?php echo $transactionData['payment']['boleto_url'] ?>" target="_blank" class="button button-print"><?php echo __('Print Boleto Bancário') ?></a>
         </div>
-        <p class="observation">
-            <?php echo __('Dica: pague seu boleto até as 21h de um dia útil para garantir que o pedido seja aprovado mais rápido :)') ?>
-        </p>
     </div>
 </div>
 <script type="text/javascript">
-    require(["jquery"], function($) {
+    require(["jquery", "jsbarcode"], function($) {
         "use strict";
         $('.button-copy').click(function(){
-            $('input.barcode').select();
+            let range = document.createRange();
+            range.selectNodeContents($('.barcode')[0]);
+
+            let selection = window.getSelection();
+            selection.removeAllRanges();
+            selection.addRange(range);
+
             document.execCommand('copy');
             return false;
-        })
+        });
+
+        $(function () {
+            $("#barcode-preview").JsBarcode().init();
+        });
     });
 </script>

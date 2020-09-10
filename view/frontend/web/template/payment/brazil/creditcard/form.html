@@ -68,7 +68,7 @@
             <label data-bind="attr: {for: getCode() + '_cc_number'}" class="label">
                 <span><!-- ko i18n: 'Credit Card Number'--><!-- /ko --></span>
             </label>
-            <div class="control">
+            <div class="control" style="display: flex; align-items: center;">
                 <input type="text" name="payment[cc_number]" class="input-text"
                        data-bind="attr: {
                                         autocomplete: off,
@@ -83,6 +83,11 @@
                                   enable: isActive($parents),
                                   value: creditCardNumber,
                                   valueUpdate: 'keyup' "/>
+                <img
+                    class="credit-card-brand-icon"
+                    alt="card brand"
+                    data-bind="attr: {src: getGlobalConfig().cc_brand_generic}"
+                    style="margin-left: 10px;" />
             </div>
         </div>
 
