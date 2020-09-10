@@ -10,12 +10,10 @@
 <div class="digitalhub-ebanx-success-page">
     <div class="page-title">
         <?php if($paymentCountry == 'br'): ?>
-            <h2>
-                <strong><?php echo __('Pedido recebido!') ?></strong>
-            </h2>
             <?php if($paymentStatus == 'CO'): ?>
                 <h2><?php echo __('Obrigado! Seu pedido foi recebido e seu pagamento está confirmado.') ?></h2>
             <?php elseif ($boletoPayment):?>
+                <h2><strong><?php echo __('Pedido recebido!') ?></strong></h2>
                 <h2><?php echo __('Pague seu boleto para finalizar sua compra.') ?></h2>
             <?php else :?>
                 <h2><?php echo __('Obrigado! Seu pedido foi recebido e seu pagamento está em processo de análise.') ?></h2>
