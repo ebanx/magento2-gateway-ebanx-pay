@@ -78,6 +78,14 @@ class ConfigProvider implements ConfigProviderInterface
             'payment' => [
                 'digitalhub_ebanx_global' => [
                     'ebanx_logo' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/ebanx-pay.png'),
+                    'cc_brand_visa' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/visa.svg'),
+                    'cc_brand_mastercard' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/mastercard.svg'),
+                    'cc_brand_amex' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/amex.svg'),
+                    'cc_brand_diners' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/diners.svg'),
+                    'cc_brand_discover' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/discover.svg'),
+                    'cc_brand_elo' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/elo.svg'),
+                    'cc_brand_hipercard' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/hipercard.svg'),
+                    'cc_brand_generic' => $this->assetRepository->getUrl('DigitalHub_Ebanx::images/generic-card.svg'),
                     'sandbox' => (int)$isSandbox,
                     'public_integration_key' => $public_integration_key,
                     'debug' => (int)$isDebugEnabled,
