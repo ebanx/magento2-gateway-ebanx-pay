@@ -4,7 +4,6 @@
     $boletoPayment = strpos($this->getOrderPaymentMethod(), 'boleto');
     $paymentStatus = $transactionData['payment']['status'];
     $paymentCountry = $transactionData['payment']['country'];
-    $orderDateTime = new \DateTime($this->getOrderDate());
 ?>
 
 <div class="digitalhub-ebanx-success-page">
@@ -46,7 +45,7 @@
             </div>
             <div class="col col-date">
                 <h4><?php echo __('Date:') ?></h4>
-                <p><?php echo $orderDateTime->format('d/m/Y H:i') ?></p>
+                <p><?php echo $this->getOrderDate() ?></p>
             </div>
             <div class="col col-total">
                 <h4><?php echo __('Total:') ?></h4>
